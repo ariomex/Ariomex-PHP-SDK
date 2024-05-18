@@ -134,7 +134,7 @@ echo $swagger . "\n";
 // echo "Crypto Withdrawals History:\n";
 // echo $cryptoWithdrawals . "\n";
 // // Example usage of the getOrders method
-// $orders = $ariomex->history->getOrders('btcusdt', '1715719124700', '1715719124700', 'limit', 'buy', 'completed', '1', '50');
+// $orders = $ariomex->history->getOrders('btcusdt','', '1715719124700', '1715719124700', 'limit', 'buy', 'completed', '1', '50');
 // echo "Orders History:\n";
 // echo $orders . "\n";
 // // Example usage of the getTrades method
