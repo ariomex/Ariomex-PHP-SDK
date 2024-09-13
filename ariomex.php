@@ -418,12 +418,12 @@ class Wallet
      *
      * @param string $symbol       The cryptocurrency symbol.
      * @param string $network      The network.
-     * @param string $amount        The amount to withdraw.
-     * @param string $addressUuid  The address UUID.
+     * @param string $amount       The amount to withdraw.
+     * @param string $address      The address .
      * @param string|null $memo    (Optional) Memo for the withdrawal.
      * @return string The withdrawal response.
      */
-    public function withdrawCrypto(string $symbol, string $network, string $amount, string $addressUuid, ?string $memo = null): string
+    public function withdrawCrypto(string $symbol, string $network, string $amount, string $address, ?string $memo = null): string
     {
         $url               = '/v1/private/wallet/withdraw_crypto';  // Corrected URL
         $isPrivateEndpoint = true;
@@ -432,7 +432,7 @@ class Wallet
             "symbol"       => $symbol,
             "network"      => $network,
             "amount"       => $amount,
-            "address_uuid" => $addressUuid,
+            "address" => $address,
             "memo"         => $memo
         ];
         return $this->parent->signAndSend($url, $query, $method, $isPrivateEndpoint);
