@@ -27,7 +27,7 @@ class Ariomex
     {
         $this->apiKey    = $apiKey;
         $this->apiSecret = $apiSecret;
-        $this->apiUrl    = 'https://api.ariomex.com';
+        $this->apiUrl    = 'https://api.ariomex.ir';
         $this->general   = new General($this);
         $this->account   = new Account($this);
         $this->wallet    = new Wallet($this);
@@ -429,11 +429,11 @@ class Wallet
         $isPrivateEndpoint = true;
         $method            = 'POST';
         $query             = [
-            "symbol"       => $symbol,
-            "network"      => $network,
-            "amount"       => $amount,
+            "symbol"  => $symbol,
+            "network" => $network,
+            "amount"  => $amount,
             "address" => $address,
-            "memo"         => $memo
+            "memo"    => $memo
         ];
         return $this->parent->signAndSend($url, $query, $method, $isPrivateEndpoint);
     }
